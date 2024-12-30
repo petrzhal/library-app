@@ -1,0 +1,82 @@
+.image-preview {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.image-preview img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.author-select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+}
+
+.author-select:focus {
+    border-color: #007bff;
+    outline: none;
+    background-color: #fff;
+}
+
+.image-preview img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.authors-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.author-card {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.author-card.selected {
+    border-color: #007bff;
+    background-color: #e9f7ff;
+}
+
+.pagination-edit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 10px;
+}
+
+.pagination-edit button {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination-edit button:disabled {
+    background-color: #f5f5f5;
+    color: #aaa;
+    cursor: not-allowed;
+}
+
+.pagination-edit button:hover:not(:disabled) {
+    background-color: #007bff;
+    color: #fff;
+}

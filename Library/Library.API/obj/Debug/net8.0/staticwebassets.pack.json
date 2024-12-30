@@ -1,0 +1,49 @@
+{
+  "Files": [
+    {
+      "Id": "G:\\Library\\Library\\Library.API\\wwwroot\\uploads\\17b2d1b6-14d8-42e6-86ec-e6adf19af954_Снимок экрана 2023-09-02 201635.png",
+      "PackagePath": "staticwebassets\\uploads\\17b2d1b6-14d8-42e6-86ec-e6adf19af954_Снимок экрана 2023-09-02 201635.png"
+    },
+    {
+      "Id": "G:\\Library\\Library\\Library.API\\wwwroot\\uploads\\4333a71f-af34-4793-8e74-78c35e553cb1_Снимок экрана 2023-07-20 161716.png",
+      "PackagePath": "staticwebassets\\uploads\\4333a71f-af34-4793-8e74-78c35e553cb1_Снимок экрана 2023-07-20 161716.png"
+    },
+    {
+      "Id": "G:\\Library\\Library\\Library.API\\wwwroot\\uploads\\4d3ac4b6-81a5-4f33-9e5a-c837b32343ab_Снимок экрана 2023-09-02 201635.png",
+      "PackagePath": "staticwebassets\\uploads\\4d3ac4b6-81a5-4f33-9e5a-c837b32343ab_Снимок экрана 2023-09-02 201635.png"
+    },
+    {
+      "Id": "G:\\Library\\Library\\Library.API\\wwwroot\\uploads\\58af7041-cdc2-40b0-9156-4221bfd15204_Снимок экрана 2023-09-06 175629.png",
+      "PackagePath": "staticwebassets\\uploads\\58af7041-cdc2-40b0-9156-4221bfd15204_Снимок экрана 2023-09-06 175629.png"
+    },
+    {
+      "Id": "G:\\Library\\Library\\Library.API\\wwwroot\\uploads\\9950276d-c1ec-4919-ad69-abbc9cacc5b1_Снимок экрана 2023-09-06 175629.png",
+      "PackagePath": "staticwebassets\\uploads\\9950276d-c1ec-4919-ad69-abbc9cacc5b1_Снимок экрана 2023-09-06 175629.png"
+    },
+    {
+      "Id": "G:\\Library\\Library\\Library.API\\wwwroot\\uploads\\b7eaefc5-e357-4467-84d3-824e0bd7b64f_Снимок экрана 2023-09-06 175629.png",
+      "PackagePath": "staticwebassets\\uploads\\b7eaefc5-e357-4467-84d3-824e0bd7b64f_Снимок экрана 2023-09-06 175629.png"
+    },
+    {
+      "Id": "G:\\Library\\Library\\Library.API\\wwwroot\\uploads\\f6475b4c-96b7-4f40-b1dc-dc379c780e3a_Снимок экрана 2023-09-06 175629.png",
+      "PackagePath": "staticwebassets\\uploads\\f6475b4c-96b7-4f40-b1dc-dc379c780e3a_Снимок экрана 2023-09-06 175629.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Library.API.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Library.API.props",
+      "PackagePath": "build\\Library.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Library.API.props",
+      "PackagePath": "buildMultiTargeting\\Library.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Library.API.props",
+      "PackagePath": "buildTransitive\\Library.API.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

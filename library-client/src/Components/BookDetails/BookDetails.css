@@ -1,0 +1,199 @@
+.book-detail-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+.book-details-title {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.book-details-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.book-details-img {
+    width: 200px;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.book-detail {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.book-detail p {
+    margin: 5px 0;
+    font-size: 1.1em;
+}
+
+.book-detail strong {
+    color: #555;
+}
+
+.btn {
+    padding: 10px 15px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+}
+
+.btn.take-book {
+    margin-top: 10px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn.take-book:hover {
+    background-color: #45a049;
+}
+
+.btn.return-book {
+    background-color: #2196F3;
+    color: white;
+}
+
+.btn.return-book:hover {
+    background-color: #0b7dda;
+}
+
+.btn.edit {
+    background-color: #FFA500;
+    color: white;
+}
+
+.btn.edit:hover {
+    background-color: #e59400;
+}
+
+.btn.delete {
+    background-color: #f44336;
+    color: white;
+}
+
+.btn.delete:hover {
+    background-color: #c62828;
+}
+
+.admin-actions {
+    margin-top: 20px;
+}
+
+.borrow-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.borrow-modal {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    height: 175px;
+    max-width: 90%;
+}
+
+.borrow-modal h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.delete-modal p {
+    margin: 10px 0;
+}
+
+.delete-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.delete-modal {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    height: 175px;
+    max-width: 90%;
+}
+
+.delete-modal h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.delete-modal p {
+    margin: 10px 0;
+}
+
+.btn.close-modal {
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn.close-modal:hover {
+    background-color: #0056b3;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.back-button {
+    margin-top: 20px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "nDuItxe7CMNVCe8X/9BDgpl3Eled+yhtaKVPo5JJeyE=",
+  "Source": "Library.API",
+  "BasePath": "_content/Library.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Library.API\\wwwroot",
+      "Source": "Library.API",
+      "ContentRoot": "G:\\Library\\Library\\Library.API\\wwwroot\\",
+      "BasePath": "_content/Library.API",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}

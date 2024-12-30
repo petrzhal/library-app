@@ -1,0 +1,47 @@
+.validation-errors-modal {
+    position: absolute;
+    top: 7%;
+    left: 85%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px 20px;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10000;
+    width: 90%;
+    max-width: 300px;
+    color: #721c24;
+    font-size: 14px;
+}
+
+.validation-errors-modal h3 {
+    margin-top: 0;
+    font-size: 16px;
+    color: #d8000c;
+}
+
+.error-block {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #dadada;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+}
+
+.error-property {
+    display: block;
+    font-weight: bold;
+    color: #000000;
+}
+
+.error-messages {
+    list-style: none;
+    padding: 0;
+    margin: 5px 0 0 0;
+}
+
+.error-message {
+    margin-bottom: 5px;
+    color: #000000;
+}

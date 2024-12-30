@@ -1,0 +1,35 @@
+.forbidden-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+.forbidden-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.forbidden-text {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.forbidden-btn {
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.forbidden-btn:hover {
+    background-color: #0056b3;
+}
