@@ -555,8 +555,7 @@
               "ToolTip": "G:\\Library\\Library\\Library.Application\\UseCases\\Books\\AddBookHandler.cs",
               "RelativeToolTip": "Library.Application\\UseCases\\Books\\AddBookHandler.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-22T16:33:27.435Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-22T16:33:27.435Z"
             },
             {
               "$type": "Document",
@@ -567,8 +566,7 @@
               "ToolTip": "G:\\Library\\Library\\Library.Application\\UseCases\\Books\\UpdateBookHandler.cs",
               "RelativeToolTip": "Library.Application\\UseCases\\Books\\UpdateBookHandler.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-22T10:21:50.328Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-22T10:21:50.328Z"
             },
             {
               "$type": "Document",
@@ -591,8 +589,7 @@
               "ToolTip": "G:\\Library\\Library\\Library.Application\\DTOs\\Book\\UpdateBookRequest.cs",
               "RelativeToolTip": "Library.Application\\DTOs\\Book\\UpdateBookRequest.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T22:26:42.995Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-17T22:26:42.995Z"
             },
             {
               "$type": "Document",
@@ -603,8 +600,7 @@
               "ToolTip": "G:\\Library\\Library\\Library.Domain\\Models\\Image.cs",
               "RelativeToolTip": "Library.Domain\\Models\\Image.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-22T15:43:42.954Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-22T15:43:42.954Z"
             },
             {
               "$type": "Document",
@@ -615,8 +611,7 @@
               "ToolTip": "G:\\Library\\Library\\Library.Application\\Mappings\\BookProfile.cs",
               "RelativeToolTip": "Library.Application\\Mappings\\BookProfile.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T16:43:36.119Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-19T16:43:36.119Z"
             },
             {
               "$type": "Document",
@@ -627,8 +622,7 @@
               "ToolTip": "G:\\Library\\Library\\Library.Application\\Validations\\Book\\UpdateBookRequestValidator.cs",
               "RelativeToolTip": "Library.Application\\Validations\\Book\\UpdateBookRequestValidator.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-22T17:25:16.427Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-22T17:25:16.427Z"
             },
             {
               "$type": "Document",
@@ -639,8 +633,7 @@
               "ToolTip": "G:\\Library\\Library\\Library.Application\\Common\\Interfaces\\Services\\ICacheService.cs",
               "RelativeToolTip": "Library.Application\\Common\\Interfaces\\Services\\ICacheService.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-30T00:17:01.771Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-30T00:17:01.771Z"
             },
             {
               "$type": "Document",
