@@ -23,7 +23,6 @@ namespace Library.Application.UseCases.Books
             image.Id = imageKey;
 
             await _cacheService.SetImageAsync(image, TimeSpan.FromDays(365));
-            image.Id = imageKey;
 
             book.ImageId = imageKey;
 

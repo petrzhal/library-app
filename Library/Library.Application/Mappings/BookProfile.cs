@@ -19,7 +19,7 @@ namespace Library.Application.Mappings
 
             CreateMap<Image, AddBookRequest>().ReverseMap();
             CreateMap<Image, UpdateBookRequest>().ReverseMap()
-                .ForMember(dest => dest.Id, opt => opt.Condition(src => src.ImageId != null))
+                .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.ImageId))
                 .ForMember(dest => dest.ImageData, opt => opt.Condition(src => src.ImageData != null))
                 .ForMember(dest => dest.ImageType, opt => opt.Condition(src => src.ImageType != null));
 
