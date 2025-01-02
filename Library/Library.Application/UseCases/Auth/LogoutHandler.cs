@@ -1,4 +1,4 @@
-﻿using Library.Domain.Interfaces.Services;
+﻿using Library.Application.Common.Interfaces.Services;
 using Library.Application.DTOs.User;
 using MediatR;
 

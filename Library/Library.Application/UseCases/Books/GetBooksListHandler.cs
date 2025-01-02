@@ -1,4 +1,4 @@
-﻿using Library.Domain.Interfaces.Repositories;
+﻿using Library.Application.Common.Interfaces;
 using Library.Application.DTOs.Book;
 using Library.Application.DTOs;
 using Library.Domain.Models;
@@ -16,7 +16,6 @@ namespace Library.Application.UseCases.Books
             var pageInfo = _mapper.Map<PageInfo>(request);
             
             var books = await _unitOfWork.Books.GetByPageAsync(pageInfo, request.Genre, request.AuthorId, request.Title);
-
             var totalCount = await _unitOfWork.Books.GetCountAsync(request.Genre, request.AuthorId, request.Title);
 
             var bookDtos = _mapper.Map<List<BookDto>>(books);

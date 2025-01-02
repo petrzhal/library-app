@@ -1,4 +1,7 @@
 ﻿namespace Library.Application.Common.Exceptions
 {
-    public class BookAlreadyBorrowedException(string message = "") : Exception(message) { }
+    public class BookAlreadyBorrowedException : Exception
+    {
+        public BookAlreadyBorrowedException(string message) : base(message) { }
+    }
 }

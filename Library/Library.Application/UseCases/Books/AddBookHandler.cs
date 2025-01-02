@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using Library.Domain.Interfaces.Repositories;
-using Library.Domain.Interfaces.Services;
+using Library.Application.Common.Interfaces;
+using Library.Application.Common.Interfaces.Services;
 using Library.Application.DTOs.Book;
 using Library.Domain.Models;
 using MediatR;

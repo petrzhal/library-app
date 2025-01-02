@@ -1,10 +1,9 @@
 ﻿using AutoMapper;
-using Library.Domain.Interfaces.Repositories;
-using Library.Domain.Interfaces.Services;
+using Library.Application.Common.Interfaces;
+using Library.Application.Common.Interfaces.Services;
 using Library.Application.DTOs.Book;
 using Library.Domain.Models;
 using MediatR;
-using Library.Application.Common.Exceptions;
 
 namespace Library.Application.UseCases.Books
 {
@@ -18,7 +17,7 @@ namespace Library.Application.UseCases.Books
         {
             var book = await _unitOfWork.Books.GetByIdAsync(request.Id);
             if (book == null)
-                throw new EntityNotFoundException($"Book not found. BookId: {request.Id}");
+                throw new KeyNotFoundException($"Book with Id {request.Id} not found.");
 
             var image = _mapper.Map<Image>(request);
             await _cacheService.SetImageAsync(image, TimeSpan.FromDays(365));

@@ -1,10 +1,9 @@
-﻿using Library.Domain.Interfaces.Repositories;
-using Library.Domain.Interfaces.Services;
+﻿using Library.Application.Common.Interfaces.Services;
+using Library.Application.Common.Interfaces;
 using Library.Application.DTOs.User;
 using Library.Domain.Models;
 using AutoMapper;
 using MediatR;
-using Library.Application.Common.Exceptions;
 
 namespace Library.Application.UseCases.Auth
 {
@@ -24,16 +23,20 @@ namespace Library.Application.UseCases.Auth
             var existingUser = await _unitOfWork.Users.GetByUserNameAsync(request.Username);
             if (existingUser != null)
             {
-                throw new UserAlreadyExistsException();
+                throw new InvalidOperationException("User already exists.");
             }
 
             var role = await _unitOfWork.Roles.GetRoleByName("User");
 
             var hashedPassword = _passwordHasher.HashPassword(request.Password);
 
-            var newUser = _mapper.Map<User>(request);
-            newUser.Password = hashedPassword;
-            newUser.RoleId = role.Id;
+            var newUser = new User
+            {
+                Username = request.Username,
+                Password = hashedPassword,
+                Email = request.Email,
+                RoleId = role.Id
+            };
 
             await _unitOfWork.Users.AddAsync(newUser);
             await _unitOfWork.CompleteAsync();

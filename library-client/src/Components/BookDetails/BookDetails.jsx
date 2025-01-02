@@ -48,7 +48,7 @@ const BookDetails = () => {
                 imageData = imageResponse.data.imageData;
                 imageType = imageResponse.data.imageType;
             }
-            console.log(bookData);
+
             setBook({
                 id: bookData.id,
                 title: bookData.title,

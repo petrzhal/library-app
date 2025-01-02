@@ -1,4 +1,5 @@
-﻿using Library.Domain.Interfaces.Repositories;
+﻿using Library.Application.Common.Interfaces.Repositories;
+using Library.Application.Common.Interfaces;
 using Library.Infrastructure.Repositories;
 
 namespace Library.Infrastructure.Persistence

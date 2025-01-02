@@ -288,8 +288,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "G:\\Library\\Library\\Library.Domain\\Library.Domain.csproj": {
-                "projectPath": "G:\\Library\\Library\\Library.Domain\\Library.Domain.csproj"
+              "G:\\Library\\Library\\Library.Application\\Library.Application.csproj": {
+                "projectPath": "G:\\Library\\Library\\Library.Application\\Library.Application.csproj"
               }
             }
           }

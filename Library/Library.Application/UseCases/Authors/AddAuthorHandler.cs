@@ -1,12 +1,12 @@
 using AutoMapper;
-using Library.Domain.Interfaces.Repositories;
+using Library.Application.Common.Interfaces;
 using Library.Application.DTOs.Authors;
 using Library.Domain.Models;
 using MediatR;
 
 namespace Library.Application.UseCases.Authors
 {
-    public class AddAuthorHandler(IUnitOfWork unitOfWork, IMapper mapper) : IRequestHandler<AddAuthorRequest, Unit>
+    public class AddBookHandler(IUnitOfWork unitOfWork, IMapper mapper) : IRequestHandler<AddAuthorRequest, Unit>
     {
         private readonly IUnitOfWork _unitOfWork = unitOfWork;
         private readonly IMapper _mapper = mapper;

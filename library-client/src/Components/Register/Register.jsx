@@ -58,8 +58,8 @@ const Register = () => {
                 console.log('Error response:', error.response.data);
                 setMessage(error.response.data.message);
 
-                if (error.response.status === 400) {
-                    const errorDetails = error.response.data.errors || [];
+                if (error.response.status === 422) {
+                    const errorDetails = error.response.data.details || [];
                     setValidationErrors(errorDetails);
                 }
             } else if (error.request) {

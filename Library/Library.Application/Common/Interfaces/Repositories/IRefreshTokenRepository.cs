@@ -1,6 +1,6 @@
 ﻿using Library.Domain.Models;
 
-namespace Library.Domain.Interfaces.Repositories
+namespace Library.Application.Common.Interfaces.Repositories
 {
     public interface IRefreshTokenRepository : IRepository<RefreshToken>
     {
