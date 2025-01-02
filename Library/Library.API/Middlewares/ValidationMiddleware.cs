@@ -17,9 +17,8 @@ namespace Library.API.Middlewares
         {
             if (context.Request.Method == HttpMethods.Post || context.Request.Method == HttpMethods.Put)
             {
-                context.Request.EnableBuffering(); // Разрешаем повторное чтение потока
+                context.Request.EnableBuffering();
 
-                // Читаем тело запроса
                 var body = await ReadRequestBodyAsync(context.Request);
 
                 if (string.IsNullOrWhiteSpace(body))
@@ -70,10 +69,10 @@ namespace Library.API.Middlewares
 
         private async Task<string> ReadRequestBodyAsync(HttpRequest request)
         {
-            request.Body.Position = 0; // Устанавливаем позицию потока в начало
-            using var reader = new StreamReader(request.Body, leaveOpen: true); // Оставляем поток открытым
+            request.Body.Position = 0;
+            using var reader = new StreamReader(request.Body, leaveOpen: true);
             var body = await reader.ReadToEndAsync();
-            request.Body.Position = 0; // Сбрасываем позицию для последующего чтения
+            request.Body.Position = 0;
             return body;
         }
     }

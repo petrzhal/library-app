@@ -1,1 +1,5 @@
 library-client/node_modules/
+*.suo
+*.cache
+**/obj/
+**/bin/
