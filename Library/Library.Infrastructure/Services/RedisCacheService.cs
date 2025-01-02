@@ -1,4 +1,4 @@
-﻿using Library.Application.Common.Interfaces.Services;
+﻿using Library.Domain.Interfaces.Services;
 using Library.Domain.Models;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;

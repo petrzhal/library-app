@@ -1,7 +1,8 @@
 ﻿using AutoMapper;
 using Library.Application.DTOs.Book;
 using MediatR;
-using Library.Application.Common.Interfaces;
+using Library.Domain.Interfaces.Repositories;
+using Library.Application.Common.Exceptions;
 
 namespace Library.Application.UseCases.Books
 {
@@ -13,6 +14,10 @@ namespace Library.Application.UseCases.Books
         public async Task<BookDto> Handle(BookIdRequest request, CancellationToken cancellationToken)
         {
             var book = await _unitOfWork.Books.GetByIdAsync(request.BookId);
+            if (book == null)
+            {
+                throw new EntityNotFoundException($"Book not found. BookId: {request.BookId}");
+            }
             var bookDto = _mapper.Map<BookDto>(book);
             return bookDto;
         }

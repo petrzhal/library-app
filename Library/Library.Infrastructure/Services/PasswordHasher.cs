@@ -1,4 +1,4 @@
-using Library.Application.Common.Interfaces.Services;
+using Library.Domain.Interfaces.Services;
 
 namespace Library.Infrastructure.Services
 {

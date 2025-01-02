@@ -1,5 +1,5 @@
-﻿using Library.Application.Common.Interfaces.Services;
-using Library.Application.Common.Interfaces;
+﻿using Library.Domain.Interfaces.Services;
+using Library.Domain.Interfaces.Repositories;
 using Library.Domain.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;

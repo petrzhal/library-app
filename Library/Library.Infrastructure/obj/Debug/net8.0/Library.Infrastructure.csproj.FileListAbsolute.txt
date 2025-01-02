@@ -15,5 +15,3 @@ G:\Library\Library\Library.Infrastructure\obj\Debug\net8.0\refint\Library.Infras
 G:\Library\Library\Library.Infrastructure\obj\Debug\net8.0\Library.Infrastructure.pdb
 G:\Library\Library\Library.Infrastructure\obj\Debug\net8.0\Library.Infrastructure.genruntimeconfig.cache
 G:\Library\Library\Library.Infrastructure\obj\Debug\net8.0\ref\Library.Infrastructure.dll
-G:\Library\Library\Library.Infrastructure\bin\Debug\net8.0\Library.Application.dll
-G:\Library\Library\Library.Infrastructure\bin\Debug\net8.0\Library.Application.pdb

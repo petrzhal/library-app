@@ -1,8 +1,7 @@
 ﻿using FluentValidation;
 using Library.API.Middlewares;
-using Library.Application.Common.Interfaces.Repositories;
-using Library.Application.Common.Interfaces.Services;
-using Library.Application.Common.Interfaces;
+using Library.Domain.Interfaces.Repositories;
+using Library.Domain.Interfaces.Services;
 using Library.Infrastructure.Persistence;
 using Library.Infrastructure.Repositories;
 using Library.Infrastructure.Services;
@@ -16,6 +15,7 @@ using Library.Application.Validations.Book;
 using Library.Application.Validations.User;
 using Library.Application.DTOs.Authors;
 using Library.Application.Validations.Author;
+using Library.Application.Validations.Image;
 
 namespace Library.API.Extensions
 {
@@ -43,7 +43,6 @@ namespace Library.API.Extensions
             services.AddScoped<IAuthorRepository, AuthorRepository>();
             services.AddScoped<IBookRepository, BookRepository>();
             services.AddScoped<IRefreshTokenRepository, RefreshTokenRepository>();
-            services.AddScoped<IImageRepository, ImageRepository>();
             services.AddScoped<IPasswordHasher, PasswordHasher>();
             services.AddSingleton<ICacheService, RedisCacheService>();
 
@@ -70,6 +69,7 @@ namespace Library.API.Extensions
             services.AddValidatorsFromAssemblyContaining<BorrowBookRequestValidator>();
             services.AddValidatorsFromAssemblyContaining<ReturnBookRequestValidator>();
             services.AddValidatorsFromAssemblyContaining<GetUsersBorrowedBooksRequestValidator>();
+            services.AddValidatorsFromAssemblyContaining<GetImageRequestValidator>();
 
             return services;
         }

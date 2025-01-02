@@ -1,6 +1,6 @@
 ﻿using Library.Domain.Models;
 
-namespace Library.Application.Common.Interfaces.Repositories
+namespace Library.Domain.Interfaces.Repositories
 {
     public interface IBookRepository : IRepository<Book>
     {

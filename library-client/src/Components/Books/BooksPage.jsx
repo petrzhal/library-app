@@ -59,14 +59,20 @@ const BooksPage = () => {
                                 imageType = imageInfo.imageType;
                             }
                         } catch (imageError) {
-                            console.error(`Ошибка при загрузке изображения для книги с id ${book.id}:`, imageError);
+                            if (imageError.response?.status === 404) {
+                                console.warn(`Изображение для книги с id ${book.id} не найдено, будет использоваться стандартное изображение.`);
+                            } else {
+                                console.error(`Ошибка при загрузке изображения для книги с id ${book.id}:`, imageError);
+                            }
+                            imageData = "none";
+                            imageType = "image/png";
                         }
                     }
-                    console.log('book: ', book);
+
                     return { ...book, ImageData: imageData, ImageType: imageType };
                 })
             );
-            console.log(booksWithImages);
+
             setBooks(booksWithImages);
             setPagination((prev) => ({
                 ...prev,
@@ -80,7 +86,6 @@ const BooksPage = () => {
             console.error("Error fetching books:", error);
         }
     };
-
 
     const fetchAuthors = async () => {
         try {
@@ -150,7 +155,6 @@ const BooksPage = () => {
         navigate('/add-book');
     };
 
-    // Show loading message until all images are loaded
     if (!imagesLoaded) {
         return <div>Загрузка книг и изображений...</div>;
     }

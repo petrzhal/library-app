@@ -1,6 +1,6 @@
 ﻿using Library.Domain.Models;
 
-namespace Library.Application.Common.Interfaces.Services
+namespace Library.Domain.Interfaces.Services
 {
     public interface ICacheService
     {

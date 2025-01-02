@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using Library.Application.Common.Exceptions;
-using Library.Application.Common.Interfaces;
-using Library.Application.Common.Interfaces.Services;
+using Library.Domain.Interfaces.Repositories;
+using Library.Domain.Interfaces.Services;
 using Library.Application.DTOs.Book;
 using Library.Domain.Models;
 using MediatR;
@@ -24,9 +24,13 @@ namespace Library.Application.UseCases.Books
             {
                 throw new BookAlreadyBorrowedException(request.BookId.ToString());
             }
+            var book = await _unitOfWork.Books.GetByIdAsync(request.BookId);
+            if (book == null)
+            {
+                throw new EntityNotFoundException($"Book not found. BookId: {request.BookId}");
+            }
 
             await _unitOfWork.BookBorrows.AddAsync(bookBorrow);
-            var book = await _unitOfWork.Books.GetByIdAsync(request.BookId);
 
             book.BorrowedAt = DateTime.UtcNow;
             book.ReturnBy = DateTime.UtcNow.AddDays(30);

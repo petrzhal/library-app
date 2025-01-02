@@ -1,5 +1,5 @@
 ﻿
-namespace Library.Application.Common.Interfaces.Repositories
+namespace Library.Domain.Interfaces.Repositories
 {
     public interface IRepository<T> where T : class
     {

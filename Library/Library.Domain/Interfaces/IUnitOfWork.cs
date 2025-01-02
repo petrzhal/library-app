@@ -1,6 +1,4 @@
-﻿using Library.Application.Common.Interfaces.Repositories;
-
-namespace Library.Application.Common.Interfaces
+﻿namespace Library.Domain.Interfaces.Repositories
 {
     public interface IUnitOfWork : IDisposable
     {

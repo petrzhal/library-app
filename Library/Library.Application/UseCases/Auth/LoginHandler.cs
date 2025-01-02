@@ -1,12 +1,9 @@
-﻿using FluentValidation;
-using Library.Application.Common.Interfaces.Services;
-using Library.Application.Common.Interfaces;
+﻿using Library.Domain.Interfaces.Repositories;
+using Library.Domain.Interfaces.Services;
 using Library.Application.DTOs.User;
-using Microsoft.AspNetCore.Identity;
 using AutoMapper;
-using Library.Application.DTOs.Book;
-using Library.Domain.Models;
 using MediatR;
+using Library.Application.Common.Exceptions;
 
 namespace Library.Application.UseCases.Auth
 {
@@ -26,7 +23,7 @@ namespace Library.Application.UseCases.Auth
             var user = await _unitOfWork.Users.GetByUserNameAsync(request.Username);
             if (user == null || !_passwordHasher.VerifyPassword(user.Password, request.Password))
             {
-                throw new UnauthorizedAccessException("Invalid credentials.");
+                throw new InvalidCredentialsException();
             }
 
             var tokensPair = await _tokenService.GenerateTokensPairAsync(user);

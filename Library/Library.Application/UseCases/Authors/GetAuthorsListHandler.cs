@@ -1,9 +1,10 @@
 ﻿using Library.Application.DTOs;
 using MediatR;
 using Library.Application.DTOs.Authors;
-using Library.Application.Common.Interfaces;
+using Library.Domain.Interfaces.Repositories;
 using AutoMapper;
 using Library.Domain.Models;
+using Library.Application.Common.Exceptions;
 
 namespace Library.Application.UseCases.Authors
 {
@@ -16,6 +17,11 @@ namespace Library.Application.UseCases.Authors
         {
             var pageInfo = _mapper.Map<PageInfo>(request);
             var authors = await _unitOfWork.Authors.GetByPageAsync(pageInfo);
+            if (authors == null)
+            {
+                throw new EntityNotFoundException($"Authors not found. PageIndex: {request.PageIndex}, PageSize: {request.PageSize}");
+            }
+
             var totalCount = await _unitOfWork.Authors.GetCountAsync();
             var authorDtos = _mapper.Map<List<AuthorDto>>(authors);
             return new Pagination<AuthorDto>(authorDtos, totalCount, pageInfo);

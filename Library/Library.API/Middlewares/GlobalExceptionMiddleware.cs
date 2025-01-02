@@ -50,11 +50,21 @@ namespace Library.API.Middlewares
                             ) as object
                     };
                     break;
+
                 case UnauthorizedAccessException:
                     statusCode = HttpStatusCode.Unauthorized;
                     response = new
                     {
                         message = "Unauthorized access.",
+                        details = exception.Message as object
+                    };
+                    break;
+
+                case InvalidCredentialsException:
+                    statusCode = HttpStatusCode.Unauthorized;
+                    response = new
+                    {
+                        message = "Incorrect username or password.",
                         details = (object?)null
                     };
                     break;
@@ -73,7 +83,16 @@ namespace Library.API.Middlewares
                     response = new
                     {
                         message = "Resource not found.",
-                        details = (object?)null
+                        details = exception.Message as object
+                    };
+                    break;
+
+                case EntityNotFoundException:
+                    statusCode = HttpStatusCode.NotFound;
+                    response = new
+                    {
+                        message = "Entity not found.",
+                        details = exception.Message as object
                     };
                     break;
 

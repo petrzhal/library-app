@@ -11,13 +11,11 @@ const ValidationErrorList = ({ errors }) => {
             <h3>Ошибки валидации:</h3>
             {errors.map((error, index) => (
                 <div key={index} className="error-block">
-                    <strong className="error-property">{error.property}</strong>
+                    <strong className="error-property">{error.propertyName}</strong>
                     <ul className="error-messages">
-                        {error.messages.map((message, msgIndex) => (
-                            <li key={msgIndex} className="error-message">
-                                {message}
-                            </li>
-                        ))}
+                        <li className="error-message">
+                            {error.errorMessage}
+                        </li>
                     </ul>
                 </div>
             ))}

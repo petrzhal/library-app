@@ -10,6 +10,7 @@ import ValidationErrorList from "../ValidationErrorList/ValidationErrorList";
 const EditBook = () => {
     const { bookId } = useParams();
     const [book, setBook] = useState({
+        id: 0,
         title: "",
         authorId: "",
         genre: "",
@@ -59,7 +60,7 @@ const EditBook = () => {
             }
 
             setBook({
-                id: bookData.id,
+                id: parseInt(bookData.id),
                 title: bookData.title,
                 authorId: bookData.author.id,
                 genre: bookData.genre,
@@ -125,7 +126,7 @@ const EditBook = () => {
         setShowValidationErrors(false);
         try {
             const requestBody = {
-                Id: bookId,
+                Id: parseInt(bookId),
                 Isbn: book.isbn,
                 Title: book.title,
                 Description: book.description,
@@ -139,8 +140,8 @@ const EditBook = () => {
             await authorizedAxios.put(`${API_BASE_URL}/books`, requestBody);
             navigate("/books");
         } catch (error) {
-            if (error.response && error.response.status === 422) {
-                const errorDetails = error.response.data.details || [];
+            if (error.response && error.response.status === 400) {
+                const errorDetails = error.response.data.errors || [];
                 setValidationErrors(errorDetails);
                 setShowValidationErrors(true);
             } else {

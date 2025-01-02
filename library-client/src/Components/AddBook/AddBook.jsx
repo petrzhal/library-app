@@ -85,8 +85,8 @@ const AddBook = () => {
             setValidationErrors([
                 ...validationErrors,
                 {
-                    property: "Author",
-                    messages: ["Автор не выбран"],
+                    propertyName: "Author",
+                    errorMessages: ["Автор не выбран"],
                 },
             ]);
             setShowValidationErrors(true);
@@ -105,8 +105,8 @@ const AddBook = () => {
             await authorizedAxios.post(`${API_BASE_URL}/books`, requestBody);
             navigate("/books");
         } catch (error) {
-            if (error.response && error.response.status === 422) {
-                const errorDetails = error.response.data.details || [];
+            if (error.response && error.response.status === 400) {
+                const errorDetails = error.response.data.errors || [];
                 setValidationErrors(errorDetails);
                 setShowValidationErrors(true);
             } else {
@@ -148,8 +148,8 @@ const AddBook = () => {
             setValidationErrors([]);
             fetchAuthors();
         } catch (error) {
-            if (error.response && error.response.status === 422) {
-                const errorDetails = error.response.data.details || [];
+            if (error.response && error.response.status === 400) {
+                const errorDetails = error.response.data.errors || [];
                 setValidationErrors(errorDetails);
                 setShowValidationErrors(true);
             } else {

@@ -1,8 +1,9 @@
 ﻿using AutoMapper;
-using Library.Application.Common.Interfaces;
-using Library.Application.Common.Interfaces.Services;
+using Library.Domain.Interfaces.Repositories;
+using Library.Domain.Interfaces.Services;
 using Library.Application.DTOs.User;
 using MediatR;
+using Library.Application.Common.Exceptions;
 
 namespace Library.Application.UseCases.Auth
 {
@@ -14,7 +15,16 @@ namespace Library.Application.UseCases.Auth
         public async Task<UserDto> Handle(GetCurrentUserRequest _, CancellationToken cancellationToken)
         {
             var userId = _tokenService.GetUserIdFromAccessToken();
-            return _mapper.Map<UserDto>(await _unitOfWork.Users.GetByIdAsync(userId));
+            if (userId == null)
+            {
+                throw new UnauthorizedAccessException();
+            }
+            var user = await _unitOfWork.Users.GetByIdAsync(userId);
+            if (user == null)
+            {
+                throw new EntityNotFoundException();
+            }
+            return _mapper.Map<UserDto>(user);
         }
     }
 }
