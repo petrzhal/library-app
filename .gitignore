@@ -1,5 +1,11 @@
 library-client/node_modules/
+Library/Library.API/bin/
+Library/Library.API/obj/
+Library/Library.Application/bin/
+Library/Library.Application/obj/
+Library/Library.Infrastructure/bin/
+Library/Library.Infrastructure/obj/
+Library/Library.Domain/bin/
+Library/Library.Domain/obj/
+*.user
 *.suo
-*.cache
-**/obj/
-**/bin/
